@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,12 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio - Matthieu Haineault</title>
   <style>
-    body { font-family: sans-serif; background: #121212; color: white; padding: 2rem; }
-    h1 { color: #00bfff; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      color: #58a6ff;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #58a6ff;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.5rem;
+    }
+
+    .projects .project {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+    }
+
+    .project h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    .skills ul {
+      columns: 2;
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li::before {
+      content: '✔️ ';
+      color: #58a6ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .skills ul {
+        columns: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Bonjour, je suis Matthieu Haineault</h1>
-  <p>Développeur passionné, en quête de nouveaux défis techniques.</p>
+
+<header>
+  <h1>Matthieu Haineault</h1>
+  <p>Développeur full stack | Passionné par le code propre et l’impact réel</p>
+</header>
+
+<section class="about">
+  <h2>À propos</h2>
+  <p>Je suis un programmeur rigoureux, autodidacte et orienté solution. Mon objectif est de créer des outils numériques simples, efficaces et accessibles. Je crois en l’apprentissage continu et je mets un point d'honneur à écrire du code maintenable.</p>
+</section>
+
+<section class="projects">
+  <h2>Projets</h2>
+
+  <div class="project">
+    <h3>TeamUp (application sportive)</h3>
+    <p>Application multiplateforme pour gérer des équipes de soccer, incluant les rôles parents, coachs, joueurs et admins. Authentification JWT, base de données MySQL avec Prisma, calendrier d’événements et statistiques en temps réel.</p>
+    <p><strong>Technos :</strong> NestJS, Prisma, MySQL, Quasar, Capacitor</p>
+    <p><a href="#">Voir le code</a></p>
+  </div>
+
+  <div class="project">
+    <h3>Task Manager</h3>
+    <p>API Node.js simple avec Express et Prisma pour gérer des tâches. Interface de gestion en C# WinForms (connectée via HTTP).</p>
+    <p><strong>Technos :</strong> Node.js, Express, Prisma, C#</p>
+    <p><a href="#">Voir le code</a></p>
+  </div>
+
+</section>
+
+<section class="skills">
+  <h2>Compétences techniques</h2>
+  <ul>
+    <li>HTML / CSS / JavaScript</li>
+    <li>Vue.js / Quasar</li>
+    <li>Node.js / Express / NestJS</li>
+    <li>MySQL / Prisma ORM</li>
+    <li>Git / GitHub / GitLab</li>
+    <li>Docker / docker compose</li>
+    <li>JWT / Auth / Guard</li>
+    <li>Linux Ubuntu / VS Code</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>📧 <a href="mailto:matthieu.haineault@email.com">matthieu.haineault@email.com</a></p>
+  <p>🔗 <a href="https://github.com/matthieuhaineault" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/tonprofil" target="_blank">LinkedIn</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Matthieu Haineault. Tous droits réservés.</p>
+</footer>
+
 </body>
 </html>
